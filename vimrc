@@ -1,4 +1,4 @@
-if exists('*minpac#init')
+if exists('g:loaded_minpac')
   " Minpac is loaded.
   call minpac#init()
   call minpac#add('k-takata/minpac', {'type': 'opt'})
@@ -225,5 +225,4 @@ nnoremap <Leader>] :YcmCompleter GoTo<CR>
 " 记住上次编辑的地方
 au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|e    ndif|endif
 set scrolloff=10
-
 
